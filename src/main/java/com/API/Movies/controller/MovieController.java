@@ -34,7 +34,7 @@ public class MovieController {
     }
 
     @GetMapping(path = "/year",produces = {MediaType.APPLICATION_XML_VALUE})
-    public ArrayList<MovieDTO> findAllMoviesByYear(@RequestParam("year")int year){
+    public ArrayList<MovieDTO> findAllMoviesByYear(@RequestParam int year){
         return movieService.findAllByYear(year);
     }
 
